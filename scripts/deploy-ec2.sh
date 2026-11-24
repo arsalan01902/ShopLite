@@ -52,7 +52,7 @@ echo "Starting Frontend..."
 docker run -d \
   --name frontend \
   --network backend-net \
-  -p 80:80 \
+  -p 127.0.0.1:8080:80 \
   "$REGISTRY/shoplite-frontend:latest"
 
 docker network connect frontend-net frontend
